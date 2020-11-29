@@ -11,7 +11,7 @@ public class App
 
         System.out.println("Your password has to meet the following criteria:\n1.Contain at least 8 characters, but no longer than 20 characters\n2.Contain at least one small and big letter\n3.Contain a special symbol, one of these: (*.,)");
         System.out.println( "Provide a secret password below:" );
-        String pass = "";
+        String pass;
         pass = input.nextLine();
         while (!checkPassword(pass)) {
             System.out.println("Password does not meet the requirements, try again");

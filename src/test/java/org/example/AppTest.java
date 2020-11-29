@@ -4,8 +4,7 @@ import org.junit.Test;
 
 import java.io.IOException;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 
 public class AppTest 
@@ -54,7 +53,8 @@ public class AppTest
     public void readWriteTest() throws IOException {
         System.out.println("Writing to a text file and reading from it to compare strings");
         String toWrite = "Testing methods 123";
-        App.writeToFile(toWrite, "C:/Users/Michal/Desktop/JavaProjects/ProgLabsProject/src/main/resources/readWriteTest.txt");
-        assertTrue(toWrite.equals());
+        String path = "C:/Users/Michal/Desktop/JavaProjects/ProgLabsProject/src/test/resources/readWriteTest.txt";
+        App.writeToFile(toWrite, path);
+        assertEquals(toWrite, App.readFile(path));
     }
 }
