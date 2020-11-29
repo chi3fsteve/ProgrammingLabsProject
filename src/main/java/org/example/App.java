@@ -18,7 +18,8 @@ public class App
             pass = input.nextLine();
         }
         writeToFile(pass, "C:/Users/Michal/Desktop/JavaProjects/ProgLabsProject/src/main/resources/pass.txt");
-        readFile("C:/Users/Michal/Desktop/JavaProjects/ProgLabsProject/src/main/resources/text.txt");
+        String content = readFile("C:/Users/Michal/Desktop/JavaProjects/ProgLabsProject/src/main/resources/text.txt");
+        System.out.println(content);
     }
 
 
