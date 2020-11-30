@@ -1,5 +1,7 @@
 package org.example;
 
+import org.apache.commons.io.FileUtils;
+
 import java.io.*;
 import java.util.Scanner;
 
@@ -23,14 +25,11 @@ public class App
     }
 
 
-
     public static String readFile(String filePath) throws IOException {
-        try(BufferedReader buffer
-                    = new BufferedReader( new InputStreamReader(
-                new FileInputStream(filePath) ) )) {
-            return buffer.readLine();
-        }
+        File xd = new File(filePath);
+        return FileUtils.readFileToString(xd, "UTF-8");
     }
+
     public static void writeToFile(String contentToWrite, String path)
             throws IOException {
         BufferedWriter writer = new BufferedWriter(new FileWriter(path));
@@ -61,7 +60,7 @@ public class App
         return (ch >= 'A' && ch <= 'Z');
     }
     public static boolean isSpecialChar(char ch) {
-        int indx = "*.,".indexOf(ch);
-        return indx != -1;
+        int index = "*.,".indexOf(ch);
+        return index != -1;
     }
 }

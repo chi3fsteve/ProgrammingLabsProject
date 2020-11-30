@@ -34,7 +34,7 @@ public class AppTest
         assertFalse(result);
     }
     @Test
-    public void testPasswordNoLettters()
+    public void testPasswordNoLetters()
     {
         System.out.println("Testing password: 123456789");
         String pass = "123456789";
